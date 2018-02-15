@@ -1,21 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.gurbanivision.mboparai.codesamples.java;
 
 /**
- *
- * @author root
+ * @author boparaim
  */
 public class SelectionStatements {
 
-    private int administrativeCostPercentage = 0;
-    private String searchTerm = "dog";
+    private int administrativeCostPercentage;
+    private String searchTerm;
     
-    public SelectionStatements() {
-        
+    public SelectionStatements(int costShare, String search) {
+        this.administrativeCostPercentage = costShare;
+        this.searchTerm = search;
     }
     
     private int donate(int amount) {
@@ -100,7 +95,7 @@ public class SelectionStatements {
     }
     
     public static void main(String[] args) {
-        SelectionStatements selectionStatements = new SelectionStatements();
+        SelectionStatements selectionStatements = new SelectionStatements(5, "dog");
         selectionStatements.oneWayIfStatement();
         selectionStatements.twoWayIfStatement();
         selectionStatements.multiWayIfStatement();
