@@ -69,10 +69,20 @@ class SelectionStatements(_administrativeCostPercentage: Int = 0, _searchTerm: S
             }
         }
 
+        // single action: no curly braces
+        // can use is Type or in Range or in Collection
         when (this.searchTerm) {
             "dog", "puppy" -> this.showPictures("dog")
             "CAT".toLowerCase() -> this.showPictures("cat")
             is String -> print("any expression can be used")
+            in "a".."z" -> println()
+            else -> this.showPictures("scorpion")
+        }
+
+        // no argument: if/else
+        when {
+            this.searchTerm.equals("dog") -> this.showPictures("dog")
+            this.searchTerm.equals("cat") -> this.showPictures("cat")
             else -> this.showPictures("scorpion")
         }
     }
